@@ -153,6 +153,14 @@ h2 span {
   gap: 10px;
 }
 
+.skills-group h3 {
+  font-family: 'Courier New', monospace;
+  font-size: 0.8rem;
+  color: #58a6ff;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 16px;
+}
 .tag {
   background: #161b22;
   border: 0.5px solid #30363d;
