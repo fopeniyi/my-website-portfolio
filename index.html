@@ -16,12 +16,42 @@
 
   <header>
     <h1>Your Name</h1>
-    <p>Aspiring Developer · Problem Solver · Creative Thinker</p>
+    <p><span id="typed"></span><span class="cursor"></span></p>
   </header>
 
   <footer>
     <p>© 2026 Your Name. Built with HTML & CSS.</p>
   </footer>
+
+  <script>
+    const phrases = [
+      "Aspiring Developer",
+      "Problem Solver",
+      "Creative Thinker"
+    ];
+
+    let i = 0, j = 0, deleting = false;
+    const el = document.getElementById("typed");
+
+    function type() {
+      const word = phrases[i];
+      el.textContent = deleting ? word.substring(0, j--) : word.substring(0, j++);
+
+      if (!deleting && j === word.length + 1) {
+        deleting = true;
+        setTimeout(type, 1500); // pause before deleting
+        return;
+      }
+      if (deleting && j === 0) {
+        deleting = false;
+        i = (i + 1) % phrases.length;
+      }
+
+      setTimeout(type, deleting ? 60 : 100);
+    }
+
+    type();
+  </script>
 
 </body>
 </html>
