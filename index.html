@@ -10,46 +10,44 @@
   <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
+    <a href="skills.html">Skills</a>
     <a href="projects.html">Projects</a>
     <a href="contact.html">Contact</a>
   </nav>
 
   <header>
+    <span class="tag">// data & it analyst</span>
     <h1>Your Name</h1>
     <p><span id="typed"></span><span class="cursor"></span></p>
   </header>
 
   <footer>
-    <p>© 2026 Your Name. Built with HTML & CSS.</p>
+    <span class="live-dot"></span>© 2026 Your Name · Built with HTML & CSS
   </footer>
 
   <script>
     const phrases = [
-      "Aspiring Developer",
-      "Problem Solver",
-      "Creative Thinker"
+      "Turning raw data into decisions",
+      "SQL · Python · Power BI · Tableau",
+      "IT Systems · Networking · Support",
+      "NetSuite · Salesforce · Jira · Asana"
     ];
-
     let i = 0, j = 0, deleting = false;
     const el = document.getElementById("typed");
-
     function type() {
       const word = phrases[i];
       el.textContent = deleting ? word.substring(0, j--) : word.substring(0, j++);
-
       if (!deleting && j === word.length + 1) {
         deleting = true;
-        setTimeout(type, 1500); // pause before deleting
+        setTimeout(type, 1800);
         return;
       }
       if (deleting && j === 0) {
         deleting = false;
         i = (i + 1) % phrases.length;
       }
-
-      setTimeout(type, deleting ? 60 : 100);
+      setTimeout(type, deleting ? 50 : 90);
     }
-
     type();
   </script>
 
