@@ -198,6 +198,24 @@ footer {
   vertical-align: middle;
 }
 
+/* About */
+
+/* Divider styling */
+.about-divider {
+  margin: 2rem 0;
+  border: 0;
+  border-top: 1px solid #ddd;
+}
+
+/* Spacing and readability for educational items */
+.edu-item {
+  margin-top: 1.5rem;
+}
+
+.edu-item p {
+  margin: 0.4rem 0;
+}
+
 /* Timeline */
 .timeline { position: relative; padding-left: 28px; }
 .timeline::before { content: ''; position: absolute; left: 0; top: 8px; bottom: 8px; width: 1px; background: #21262d; }
