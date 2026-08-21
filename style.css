@@ -1,3 +1,6 @@
+/* ==========================
+   Global Reset & Theme
+   ================          */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
@@ -7,6 +10,9 @@ body {
   background: #0d1117;
 }
 
+/* ==========================
+   Navigation
+   ================          */
 nav {
   background: #0d1117;
   padding: 18px 30px;
@@ -31,6 +37,9 @@ nav a {
 
 nav a:hover { color: #58a6ff; }
 
+/* ==========================
+   Header & Typography
+   ================          */
 header {
   text-align: center;
   padding: 100px 20px 80px;
@@ -72,7 +81,7 @@ header p {
 
 @keyframes blink {
   0%, 100% { opacity: 1; }
-  50%       { opacity: 0; }
+  50%        { opacity: 0; }
 }
 
 section {
@@ -97,7 +106,9 @@ h2 span {
   margin-right: 8px;
 }
 
-/* Hero bio styling */
+/* ==========================
+   About Page Cards & Layout
+   ================          */
 .about-hero {
   margin-bottom: 2rem;
 }
@@ -105,18 +116,16 @@ h2 span {
 .bio-text {
   font-size: 1.1rem;
   line-height: 1.6;
-  color: #d1d5db;
+  color: #8b949e;
   max-width: 800px;
 }
 
-/* Divider */
 .about-divider {
   margin: 2.5rem 0;
   border: 0;
-  border-top: 1px solid #1f2937;
+  border-top: 0.5px solid #21262d;
 }
 
-/* Education Card Grid Layout */
 .edu-grid {
   display: flex;
   flex-direction: column;
@@ -124,17 +133,16 @@ h2 span {
   margin-top: 1.5rem;
 }
 
-/* Individual Education Card Style */
 .edu-card {
-  background: #111827; /* Dark clean card background matching your theme */
-  border: 1px solid #1f2937;
-  border-radius: 8px;
+  background: #161b22;
+  border: 0.5px solid #30363d;
+  border-radius: 10px;
   padding: 1.5rem;
   transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
 .edu-card:hover {
-  border-color: #3b82f6; /* Subtle accent highlight on hover */
+  border-color: #58a6ff;
   transform: translateY(-2px);
 }
 
@@ -144,52 +152,87 @@ h2 span {
   align-items: flex-start;
   flex-wrap: wrap;
   gap: 0.5rem;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.5rem;
 }
 
 .edu-card h3 {
   margin: 0;
-  color: #f3f4f6;
-  font-size: 1.25rem;
+  color: #e6edf3;
+  font-size: 1.1rem;
+  font-weight: 600;
 }
 
 .edu-date {
-  font-size: 0.85rem;
-  color: #9ca3af;
-  background: #1f2937;
-  padding: 0.2rem 0.6rem;
-  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.75rem;
+  color: #58a6ff;
+  background: #0d1117;
+  border: 0.5px solid #21262d;
+  padding: 3px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
 }
 
 .edu-degree {
   font-weight: 600;
-  color: #60a5fa; /* Professional accent blue */
+  color: #58a6ff;
   margin-bottom: 0.8rem;
+  font-size: 0.95rem;
 }
 
 .edu-card p {
   margin: 0.4rem 0;
-  font-size: 0.95rem;
-  color: #9ca3af;
+  font-size: 0.85rem;
+  color: #8b949e;
   line-height: 1.5;
 }
 
 .edu-card strong {
-  color: #e5e7eb;
+  color: #e6edf3;
 }
 
 .edu-list {
   margin: 0.4rem 0 0 1.2rem;
   padding: 0;
-  color: #9ca3af;
-  font-size: 0.95rem;
+  color: #8b949e;
+  font-size: 0.85rem;
 }
 
 .edu-list li {
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.3rem;
 }
 
-/* Project cards */
+/* ==========================
+   Timeline (Experience Page)
+   ================          */
+.timeline { position: relative; padding-left: 28px; }
+.timeline::before { content: ''; position: absolute; left: 0; top: 8px; bottom: 8px; width: 1px; background: #21262d; }
+
+.job { position: relative; margin-bottom: 36px; }
+.job-dot { position: absolute; left: -33px; top: 6px; width: 10px; height: 10px; border-radius: 50%; background: #58a6ff; border: 2px solid #0d1117; }
+
+.job-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 4px; gap: 12px; }
+.job-title { font-size: 1rem; font-weight: 600; color: #e6edf3; }
+.job-company { font-size: 0.85rem; color: #8b949e; margin-bottom: 12px; }
+.job-date { font-family: 'Courier New', monospace; font-size: 0.75rem; color: #58a6ff; background: #161b22; border: 0.5px solid #30363d; padding: 3px 10px; border-radius: 20px; white-space: nowrap; }
+
+.expand-btn { display: flex; align-items: center; gap: 8px; background: #161b22; border: 0.5px solid #30363d; color: #8b949e; font-size: 0.8rem; padding: 6px 14px; border-radius: 6px; cursor: pointer; transition: border-color 0.2s, color 0.2s; }
+.expand-btn:hover { border-color: #58a6ff; color: #58a6ff; }
+
+.job-projects { display: flex; flex-direction: column; gap: 10px; margin-top: 14px; }
+.job-projects.hidden { display: none; }
+
+.proj-card { background: #161b22; border: 0.5px solid #30363d; border-radius: 10px; padding: 16px 18px; transition: border-color 0.2s, transform 0.2s; }
+.proj-card:hover { border-color: #58a6ff; transform: translateX(4px); }
+.proj-name { font-size: 0.95rem; font-weight: 600; color: #e6edf3; margin-bottom: 6px; }
+.proj-desc { font-size: 0.85rem; color: #8b949e; }
+
+.proj-tags { display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap; }
+.proj-tag { font-family: 'Courier New', monospace; font-size: 0.75rem; color: #58a6ff; background: #0d1117; border: 0.5px solid #21262d; padding: 2px 10px; border-radius: 20px; }
+
+/* ==========================
+   Projects & Skills Grid
+   ================          */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -225,24 +268,8 @@ h2 span {
 
 .card p { color: #8b949e; font-size: 0.9rem; }
 
-/* Skills section */
 .skills-group {
   margin-bottom: 36px;
-}
-
-.skills-group h3 {
-  font-family: 'Courier New', monospace;
-  font-size: 0.85rem;
-  color: #58a6ff;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  margin-bottom: 14px;
-}
-
-.skills-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
 }
 
 .skills-group h3 {
@@ -253,6 +280,13 @@ h2 span {
   letter-spacing: 0.1em;
   margin-bottom: 16px;
 }
+
+.skills-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
 .tag {
   background: #161b22;
   border: 0.5px solid #30363d;
@@ -268,6 +302,127 @@ h2 span {
   color: #58a6ff;
 }
 
+/* ==========================
+   Certifications Page Layout
+   ================          */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.section-title {
+  color: #58a6ff;
+  font-family: monospace;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.05em;
+}
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.featured-card {
+  background: #161b22;
+  border: 0.5px solid #30363d;
+  border-radius: 10px;
+  padding: 1.5rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.featured-badge {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  font-family: 'Courier New', monospace;
+  background: #0d1117;
+  border: 0.5px solid #21262d;
+  color: #58a6ff;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  letter-spacing: 0.05em;
+}
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #e6edf3;
+  margin: 0 0 0.3rem 0;
+  padding-right: 4rem;
+}
+
+.card-issuer {
+  font-size: 0.85rem;
+  color: #8b949e;
+  margin-bottom: 1rem;
+}
+
+.card-desc {
+  font-size: 0.85rem;
+  color: #8b949e;
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  color: #58a6ff;
+}
+
+.card-footer a {
+  color: #58a6ff;
+  text-decoration: none;
+}
+
+.card-footer a:hover {
+  text-decoration: underline;
+}
+
+.all-certs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.cert-box {
+  background: #161b22;
+  border: 0.5px solid #30363d;
+  border-radius: 8px;
+  padding: 1.25rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 110px;
+}
+
+.cert-box h4 {
+  font-size: 0.9rem;
+  color: #e6edf3;
+  margin: 0 0 0.4rem 0;
+  font-weight: 600;
+}
+
+.cert-box span {
+  font-size: 0.75rem;
+  color: #8b949e;
+}
+
+/* ==========================
+   Footer & Links
+   ================          */
 a { color: #58a6ff; text-decoration: none; }
 a:hover { text-decoration: underline; }
 
@@ -283,210 +438,10 @@ footer {
 
 .live-dot {
   display: inline-block;
-  width: 6px; height: 6px;
+  width: 6px; 
+  height: 6px;
   background: #3fb950;
   border-radius: 50%;
   margin-right: 6px;
   vertical-align: middle;
-}
-
-/* About */
-
-/* Divider styling */
-.about-divider {
-  margin: 2rem 0;
-  border: 0;
-  border-top: 1px solid #ddd;
-}
-
-/* Spacing and readability for educational items */
-.edu-item {
-  margin-top: 1.5rem;
-}
-
-.edu-item p {
-  margin: 0.4rem 0;
-}
-
-/* Timeline */
-.timeline { position: relative; padding-left: 28px; }
-.timeline::before { content: ''; position: absolute; left: 0; top: 8px; bottom: 8px; width: 1px; background: #21262d; }
-
-.job { position: relative; margin-bottom: 36px; }
-.job-dot { position: absolute; left: -33px; top: 6px; width: 10px; height: 10px; border-radius: 50%; background: #58a6ff; border: 2px solid #0d1117; }
-
-.job-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 4px; gap: 12px; }
-.job-title { font-size: 1rem; font-weight: 600; color: #e6edf3; }
-.job-company { font-size: 0.85rem; color: #8b949e; margin-bottom: 12px; }
-.job-date { font-family: 'Courier New', monospace; font-size: 0.75rem; color: #58a6ff; background: #161b22; border: 0.5px solid #30363d; padding: 3px 10px; border-radius: 20px; white-space: nowrap; }
-
-.expand-btn { display: flex; align-items: center; gap: 8px; background: #161b22; border: 0.5px solid #30363d; color: #8b949e; font-size: 0.8rem; padding: 6px 14px; border-radius: 6px; cursor: pointer; transition: border-color 0.2s, color 0.2s; }
-.expand-btn:hover { border-color: #58a6ff; color: #58a6ff; }
-
-.job-projects { display: flex; flex-direction: column; gap: 10px; margin-top: 14px; }
-.job-projects.hidden { display: none; }
-
-.proj-card { background: #161b22; border: 0.5px solid #30363d; border-radius: 10px; padding: 16px 18px; transition: border-color 0.2s, transform 0.2s; }
-.proj-card:hover { border-color: #58a6ff; transform: translateX(4px); }
-.proj-name { font-size: 0.95rem; font-weight: 600; color: #e6edf3; margin-bottom: 6px; }
-.proj-desc { font-size: 0.85rem; color: #8b949e; }
-
-.proj-tags { display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap; }
-.proj-tag { font-family: 'Courier New', monospace; font-size: 0.75rem; color: #58a6ff; background: #0d1117; border: 0.5px solid #21262d; padding: 2px 10px; border-radius: 20px; }
-
-
-/* Certification */
-
-/* Base Layout & Theme */
-body {
-  background-color: #0b0f19;
-  color: #e5e7eb;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-nav {
-  padding: 1.5rem 2rem;
-  display: flex;
-  gap: 1.5rem;
-}
-
-nav a {
-  color: #9ca3af;
-  text-decoration: none;
-  font-size: 0.9rem;
-}
-
-nav a:hover {
-  color: #3b82f6;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
-}
-
-.section-title {
-  color: #3b82f6;
-  font-family: monospace;
-  font-size: 1.1rem;
-  margin-bottom: 1.5rem;
-  letter-spacing: 0.05em;
-}
-
-h3.sub-heading {
-  color: #9ca3af;
-  font-size: 0.95rem;
-  font-weight: 500;
-  margin-bottom: 1rem;
-}
-
-/* Featured Cards Grid */
-.featured-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 1.5rem;
-  margin-bottom: 3rem;
-}
-
-.featured-card {
-  background: #111827;
-  border: 1px solid #1f2937;
-  border-radius: 10px;
-  padding: 1.5rem;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.featured-badge {
-  position: absolute;
-  top: 1.25rem;
-  right: 1.25rem;
-  background: #1d4ed8;
-  color: #eff6ff;
-  font-size: 0.65rem;
-  font-weight: 700;
-  padding: 0.2rem 0.6rem;
-  border-radius: 12px;
-  letter-spacing: 0.05em;
-}
-
-.card-title {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #ffffff;
-  margin: 0 0 0.3rem 0;
-  padding-right: 4rem;
-}
-
-.card-issuer {
-  font-size: 0.85rem;
-  color: #9ca3af;
-  margin-bottom: 1rem;
-}
-
-.card-desc {
-  font-size: 0.85rem;
-  color: #d1d5db;
-  margin-bottom: 1.5rem;
-  line-height: 1.4;
-}
-
-.card-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 0.8rem;
-  color: #60a5fa;
-}
-
-.card-footer a {
-  color: #60a5fa;
-  text-decoration: none;
-}
-
-.card-footer a:hover {
-  text-decoration: underline;
-}
-
-/* All Certifications Grid */
-.all-certs-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 1rem;
-}
-
-.cert-box {
-  background: #111827;
-  border: 1px solid #1f2937;
-  border-radius: 8px;
-  padding: 1.25rem;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: 110px;
-}
-
-.cert-box h4 {
-  font-size: 0.9rem;
-  color: #ffffff;
-  margin: 0 0 0.4rem 0;
-  font-weight: 600;
-}
-
-.cert-box span {
-  font-size: 0.75rem;
-  color: #9ca3af;
-}
-
-footer {
-  text-align: center;
-  padding: 3rem 0;
-  color: #6b7280;
-  font-size: 0.85rem;
 }
