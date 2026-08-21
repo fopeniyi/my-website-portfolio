@@ -97,6 +97,98 @@ h2 span {
   margin-right: 8px;
 }
 
+/* Hero bio styling */
+.about-hero {
+  margin-bottom: 2rem;
+}
+
+.bio-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #d1d5db;
+  max-width: 800px;
+}
+
+/* Divider */
+.about-divider {
+  margin: 2.5rem 0;
+  border: 0;
+  border-top: 1px solid #1f2937;
+}
+
+/* Education Card Grid Layout */
+.edu-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+/* Individual Education Card Style */
+.edu-card {
+  background: #111827; /* Dark clean card background matching your theme */
+  border: 1px solid #1f2937;
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.edu-card:hover {
+  border-color: #3b82f6; /* Subtle accent highlight on hover */
+  transform: translateY(-2px);
+}
+
+.edu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.3rem;
+}
+
+.edu-card h3 {
+  margin: 0;
+  color: #f3f4f6;
+  font-size: 1.25rem;
+}
+
+.edu-date {
+  font-size: 0.85rem;
+  color: #9ca3af;
+  background: #1f2937;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+}
+
+.edu-degree {
+  font-weight: 600;
+  color: #60a5fa; /* Professional accent blue */
+  margin-bottom: 0.8rem;
+}
+
+.edu-card p {
+  margin: 0.4rem 0;
+  font-size: 0.95rem;
+  color: #9ca3af;
+  line-height: 1.5;
+}
+
+.edu-card strong {
+  color: #e5e7eb;
+}
+
+.edu-list {
+  margin: 0.4rem 0 0 1.2rem;
+  padding: 0;
+  color: #9ca3af;
+  font-size: 0.95rem;
+}
+
+.edu-list li {
+  margin-bottom: 0.2rem;
+}
+
 /* Project cards */
 .projects-grid {
   display: grid;
