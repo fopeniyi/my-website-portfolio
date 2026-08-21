@@ -84,7 +84,7 @@ header p {
   50%        { opacity: 0; }
 }
 
-section {
+section, .container {
   max-width: 860px;
   margin: 60px auto;
   padding: 0 24px;
