@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Experience – My Portfolio</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="experience.html">Experience</a>
+    <a href="skills.html">Skills</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <section>
+    <h2><span>//</span> Experience</h2>
+
+    <div class="timeline">
+
+      <div class="job">
+        <div class="job-dot"></div>
+        <div class="job-header">
+          <div>
+            <div class="job-title">Data & IT Analyst</div>
+            <div class="job-company">Company Name · Full-time</div>
+          </div>
+          <div class="job-date">2022 – Present</div>
+        </div>
+        <button class="expand-btn" onclick="toggle(this)" aria-expanded="false">
+          <span class="btn-arrow">▼</span> Projects (2)
+        </button>
+        <div class="job-projects hidden">
+          <div class="proj-card">
+            <div class="proj-name">Sales Performance Dashboard</div>
+            <div class="proj-desc">Built an end-to-end dashboard tracking KPIs across 5 regions, reducing reporting time by 40%.</div>
+            <div class="proj-tags">
+              <span class="proj-tag">Power BI</span>
+              <span class="proj-tag">SQL</span>
+              <span class="proj-tag">Excel</span>
+            </div>
+          </div>
+          <div class="proj-card">
+            <div class="proj-name">SharePoint Intranet Redesign</div>
+            <div class="proj-desc">Led the redesign of the company intranet, improving navigation and team adoption.</div>
+            <div class="proj-tags">
+              <span class="proj-tag">SharePoint</span>
+              <span class="proj-tag">Web Design</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="job">
+        <div class="job-dot"></div>
+        <div class="job-header">
+          <div>
+            <div class="job-title">IT Support Analyst</div>
+            <div class="job-company">Previous Company · Full-time</div>
+          </div>
+          <div class="job-date">2019 – 2022</div>
+        </div>
+        <button class="expand-btn" onclick="toggle(this)" aria-expanded="false">
+          <span class="btn-arrow">▼</span> Projects (1)
+        </button>
+        <div class="job-projects hidden">
+          <div class="proj-card">
+            <div class="proj-name">Network Infrastructure Upgrade</div>
+            <div class="proj-desc">Managed rollout of new networking hardware across 3 office locations with zero downtime.</div>
+            <div class="proj-tags">
+              <span class="proj-tag">Networking</span>
+              <span class="proj-tag">IT Support</span>
+              <span class="proj-tag">Jira</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <span class="live-dot"></span>© 2026 Your Name · Built with HTML & CSS
+  </footer>
+
+  <script>
+    function toggle(btn) {
+      const projects = btn.nextElementSibling;
+      const isOpen = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', !isOpen);
+      btn.querySelector('.btn-arrow').textContent = isOpen ? '▼' : '▲';
+      projects.classList.toggle('hidden', isOpen);
+    }
+  </script>
+
+</body>
+</html>
