@@ -305,53 +305,20 @@ h2 span {
 /* ==========================
    Certifications Page Layout
    ================          */
-/* Base Layout & Theme */
-body {
-  background-color: #0b0f19;
-  color: #e5e7eb;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-nav {
-  padding: 1.5rem 2rem;
-  display: flex;
-  gap: 1.5rem;
-}
-
-nav a {
-  color: #9ca3af;
-  text-decoration: none;
-  font-size: 0.9rem;
-}
-
-nav a:hover {
-  color: #3b82f6;
-}
-
-.container {
+.certifications-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0 24px;
 }
 
 .section-title {
-  color: #3b82f6;
+  color: #58a6ff;
   font-family: monospace;
   font-size: 1.1rem;
   margin-bottom: 1.5rem;
   letter-spacing: 0.05em;
 }
 
-h3.sub-heading {
-  color: #9ca3af;
-  font-size: 0.95rem;
-  font-weight: 500;
-  margin-bottom: 1rem;
-}
-
-/* Featured Cards Grid */
 .featured-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -360,8 +327,8 @@ h3.sub-heading {
 }
 
 .featured-card {
-  background: #111827;
-  border: 1px solid #1f2937;
+  background: #161b22;
+  border: 0.5px solid #30363d;
   border-radius: 10px;
   padding: 1.5rem;
   position: relative;
@@ -374,8 +341,10 @@ h3.sub-heading {
   position: absolute;
   top: 1.25rem;
   right: 1.25rem;
-  background: #1d4ed8;
-  color: #eff6ff;
+  font-family: 'Courier New', monospace;
+  background: #0d1117;
+  border: 0.5px solid #21262d;
+  color: #58a6ff;
   font-size: 0.65rem;
   font-weight: 700;
   padding: 0.2rem 0.6rem;
@@ -386,20 +355,20 @@ h3.sub-heading {
 .card-title {
   font-size: 1.1rem;
   font-weight: 600;
-  color: #ffffff;
+  color: #e6edf3;
   margin: 0 0 0.3rem 0;
   padding-right: 4rem;
 }
 
 .card-issuer {
   font-size: 0.85rem;
-  color: #9ca3af;
+  color: #8b949e;
   margin-bottom: 1rem;
 }
 
 .card-desc {
   font-size: 0.85rem;
-  color: #d1d5db;
+  color: #8b949e;
   margin-bottom: 1.5rem;
   line-height: 1.4;
 }
@@ -409,11 +378,11 @@ h3.sub-heading {
   justify-content: space-between;
   align-items: center;
   font-size: 0.8rem;
-  color: #60a5fa;
+  color: #58a6ff;
 }
 
 .card-footer a {
-  color: #60a5fa;
+  color: #58a6ff;
   text-decoration: none;
 }
 
@@ -421,16 +390,16 @@ h3.sub-heading {
   text-decoration: underline;
 }
 
-/* All Certifications Grid */
 .all-certs-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 1rem;
+  margin-top: 1rem;
 }
 
 .cert-box {
-  background: #111827;
-  border: 1px solid #1f2937;
+  background: #161b22;
+  border: 0.5px solid #30363d;
   border-radius: 8px;
   padding: 1.25rem;
   text-align: center;
@@ -442,21 +411,14 @@ h3.sub-heading {
 
 .cert-box h4 {
   font-size: 0.9rem;
-  color: #ffffff;
+  color: #e6edf3;
   margin: 0 0 0.4rem 0;
   font-weight: 600;
 }
 
 .cert-box span {
   font-size: 0.75rem;
-  color: #9ca3af;
-}
-
-footer {
-  text-align: center;
-  padding: 3rem 0;
-  color: #6b7280;
-  font-size: 0.85rem;
+  color: #8b949e;
 }
 
 /* ==========================
